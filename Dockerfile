@@ -1,7 +1,7 @@
 FROM alpine:3.3
 MAINTAINER Pål Ruud <ruudud@gmail.com>
 
-RUN apk --no-cache add bash curl dnsmasq
+RUN apk --no-cache add bash curl syslog-ng dnsmasq
 
 RUN curl -sSL https://get.docker.com/builds/Linux/x86_64/docker-1.11.1.tgz \
         | tar zx -C /tmp &&\
