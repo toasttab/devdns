@@ -15,7 +15,7 @@ YELLOW="\e[0;33;49m"
 trap shutdown SIGINT SIGTERM
 
 start_dnsmasq(){
-  dnsmasq --log-queries --keep-in-foreground &
+  dnsmasq --log-facility=- --log-queries --keep-in-foreground &
   dnsmasq_pid=$!
 }
 reload_dnsmasq(){
